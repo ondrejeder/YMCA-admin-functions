@@ -11,10 +11,10 @@
     <fieldset>
         <form id="form-createandsend" action="https://script.google.com/macros/s/AKfycbzojtw8nIdptjjT9_5hGV3OZKvAOIfMAYj9bje6IJyqlpVuWBwpXssAzU77CQtfYxVJ/exec?function=TestAdmin1" method="POST">
             <label for="mail">Email rodiče:</label>
-            <input type="text" id="mail1">
+            <input type="text" id="mail1" name="mail1">
             <br> <br>
             <label for="jmeno">Jméno dítěte:</label>
-            <input type="text" id="jmeno1">
+            <input type="text" id="jmeno1" name="jmeno1">
             <br> <br>
             <label for="sendtome">Poslat na:</label>
             <select name="sendmail" id="sendmail">
@@ -30,16 +30,16 @@
     <fieldset>
         <form id="form-sendfromdb" action="https://script.google.com/macros/s/AKfycbzojtw8nIdptjjT9_5hGV3OZKvAOIfMAYj9bje6IJyqlpVuWBwpXssAzU77CQtfYxVJ/exec?function=TestAdmin2" method="POST">
             <label for="mail">Email rodiče:</label>
-            <input type="text" id="mail2">
+            <input type="text" id="mail2" name="mail2">
             <br> <br>
             <label for="jmeno">Jméno dítěte:</label>
-            <input type="text" id="jmeno2">
+            <input type="text" id="jmeno2" name="jmeno2">
             <br> <br>
             <label for="mailsubject">Předmět mailu</label>
-            <input type="text" id="mailsubject">
+            <input type="text" id="mailsubject" name="mailsubject">
             <br> <br>
             <label for="mailtext">Text mailu</label>
-            <input type="text" id="mailtext">
+            <input type="text" id="mailtext" name="mailtext">
             <br><br>
             <button type="submit">Odeslat mail s odkazem</button>
         </form>
