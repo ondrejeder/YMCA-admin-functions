@@ -22,7 +22,7 @@
                 <option value="parentmail">Mail rodiče</option>
             </select>
             <br><br>
-            <button type="submit" value="Submit">Vygenerovat přihlášku a odeslat</button>
+            <button type="submit">Vygenerovat přihlášku a odeslat</button>
             <br><br>
         </form>
     </fieldset>
@@ -40,25 +40,14 @@
             <br> <br>
             <label for="mailtext">Text mailu</label>
             <input type="text" id="mailtext" name="mailtext">
+            <textarea name="textmail" rows="5" cols="50">
             <br><br>
             <button type="submit">Odeslat mail s odkazem</button>
         </form>
     </fieldset>
     
     <script>
-        var form = document.getElementById('form-createandsend');
-        form.addEventListener("submit", e => {
-            e.preventDefault();
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(document.getElementById("form-createandsend")),
-            }).then(
-                response => response.json()
-            ).then((html) => {
-                // you can put any JS code here
-                alert("Data odeslána")
-            });
-        });
+        
     </script>
 </body>
 </html>
