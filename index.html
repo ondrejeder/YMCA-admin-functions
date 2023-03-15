@@ -56,7 +56,19 @@
     </fieldset>
     
     <script>
-        
+        var form = document.getElementById("form-completefromdb");
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("form-completefromdb")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                // you can put any JS code here
+                // alert("Přihláška byla zadána do systému, děkujeme.")
+            });
+        });
     </script>
 </body>
 </html>
