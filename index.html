@@ -22,7 +22,7 @@
                 <option value="parentmail">Mail rodiče</option>
             </select>
             <br><br>
-            <button type="submit">Vygenerovat přihlášku a odeslat</button>
+            <button type="submit" onclick="customSubmit(event)">Vygenerovat přihlášku a odeslat</button>
             <br><br>
         </form>
     </fieldset>
@@ -56,6 +56,17 @@
     </fieldset>
     
     <script>
+        function customSubmit(event) {
+            event.preventDefault();
+            
+            alert("data odeslana");
+            
+            var theForm = document.getElementById("form-createandsend");
+            var url = theForm.action;
+            var formData new FormData(theForm);
+            fetch(url, {method: "POST", body: formData});
+        }
+        
         var form = document.getElementById("form-completefromdb");
         form.addEventListener("submit", e => {
             e.preventDefault();
